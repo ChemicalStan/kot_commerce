@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>About</title>
-
+<!-- Doc type/ title -->
+<?php include_once("./includes/functions.php");
+doctype("About");
+?>
+     <!-- PAGE HEADER -->
 		<?php include_once("./includes/header1.php");?>
 
 			<!-- Topbar -->

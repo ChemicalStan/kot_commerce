@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Blog Detail</title>
-
+<?php include_once("./includes/functions.php");
+doctype("Blog Detail");
+?>
+     <!-- PAGE HEADER -->
 		<?php include_once("./includes/header1.php");?>
 
 			<!-- Topbar -->

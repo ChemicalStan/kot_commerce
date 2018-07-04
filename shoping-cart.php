@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Shoping Cart</title>
-
-<?php include_once("./includes/header1.php");?>
+<!-- Doc type/ title -->
+<?php include_once("./includes/functions.php");
+doctype("Shoping Cart");
+?>
+     <!-- PAGE HEADER -->
+		<?php include_once("./includes/header1.php");?>
 
 			<!-- Topbar -->
 			<div class="top-bar">

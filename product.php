@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Product</title>
+<!-- Doc type/ title -->
+<?php include_once("./includes/functions.php");
+doctype("Product");
+?>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
