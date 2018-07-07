@@ -7,7 +7,7 @@ $password = '';
 $host = 'localhost';
 $dsn = "mysql:host=$host;dbname=$name";
 $pdo = new PDO($dsn,$username,$password);
-echo 'We are connected';
+// echo 'We are connected';
 
 }
 catch(PDOException $e){
