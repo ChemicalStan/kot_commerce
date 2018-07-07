@@ -1,3 +1,6 @@
+<!-- database connection -->
+<?php include_once("./includes/db.php");?> 
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	

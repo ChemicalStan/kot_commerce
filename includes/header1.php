@@ -1,4 +1,5 @@
- 
+<!-- database connection -->
+<?php include_once("./includes/db.php");?> 
 
 <!-- PAGE HEADER FOR ABOUT, BLOG-DETAILS, BLOG, CONTACT AND SHOPPING-CART PAGES -->
 <!--===============================================================================================-->	
