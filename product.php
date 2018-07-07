@@ -272,11 +272,11 @@ doctype("Product");
 
 
     <!-- show all categories -->
-		<?php
-			try{
+	<?php
+		try{
 
-				$sql = "SELECT * FROM categories";
-				$stmt = $pdo->query($sql);
+			$sql = "SELECT * FROM categories";
+			$stmt = $pdo->query($sql);
 				while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
 					$cat_title = $row->cat_title;		
 					$lower_cat_title = strtolower($cat_title);	
@@ -284,7 +284,7 @@ doctype("Product");
 					echo "<button class='stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5' data-filter='.$lower_cat_title'>
 							  $cat_title
 						  </button>";			
-				}
+					}
 			
 			}catch(PDOExeption $e){
 			
@@ -294,8 +294,7 @@ doctype("Product");
 			}
 		?>
 
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
+<!-- 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
 						Women
 					</button>
 
@@ -313,7 +312,8 @@ doctype("Product");
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
 						Watches
-					</button>
+					</button> -->
+
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
@@ -331,15 +331,7 @@ doctype("Product");
 				</div>
 				
 				<!-- Search product -->
-				<div class="dis-none panel-search w-full p-t-10 p-b-15">
-					<div class="bor8 dis-flex p-l-15">
-						<button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-							<i class="zmdi zmdi-search"></i>
-						</button>
-
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
-					</div>	
-				</div>
+				<?php include_once("./includes/search.php");?>
 
 				<!-- Filter -->
 				<div class="dis-none panel-filter w-full p-t-10">

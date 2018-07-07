@@ -1,0 +1,10 @@
+<!-- for filter  -->
+on click (color or tag or price) 
+select all product where product's (what ever filter cat was clicked) is the color click
+
+<!-- for the search engine -->
+select all from product where productname, tag, color etc like %search% 
+
+<!-- for likes -->  if possible create table for like:
+table should contain like id, post_liked id, liked dateand time ,liked by... etc . this has a high tendency of not working..
+onclick the button, set liked = true and likecount = likecount + 1 on click again, set like = false and likecount = likecount - 1
