@@ -36,9 +36,9 @@ doctype("Home 02");
 								<a href="shoping-cart.php">Features</a>
 							</li>
 
-							<li>
+<!-- 							<li>
 								<a href="blog.php">Blog</a>
-							</li>
+							</li> -->
 
 							<li>
 								<a href="about.php">About</a>
@@ -128,9 +128,9 @@ doctype("Home 02");
 					<a href="shoping-cart.php" class="label1 rs1" data-label1="hot">Features</a>
 				</li>
 
-				<li>
+<!-- 				<li>
 					<a href="blog.php">Blog</a>
-				</li>
+				</li> -->
 
 				<li>
 					<a href="about.php">About</a>
@@ -1659,7 +1659,7 @@ doctype("Home 02");
 
 
 	<!-- Blog -->
-	<section class="sec-blog bg0 p-t-60 p-b-90">
+<!-- 	<section class="sec-blog bg0 p-t-60 p-b-90">
 		<div class="container">
 			<div class="p-b-66">
 				<h3 class="ltext-105 cl5 txt-center respon1">
@@ -1801,7 +1801,7 @@ doctype("Home 02");
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 
 	<!-- Footer -->
