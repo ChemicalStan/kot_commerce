@@ -10,40 +10,19 @@ doctype("Product Detail");
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
 				<?php include_once("./includes/topbar.php");?>
+
+			<div class="wrap-menu-desktop how-shadow1">
+				<nav class="limiter-menu-desktop container">
+					
+					<!-- Logo desktop -->		
+					<a href="#" class="logo">
+						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+					</a>
 					<!-- Menu desktop -->
-					<div class="menu-desktop">
-						<ul class="main-menu">
-							<li>
-								<a href="index.php">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.php">Homepage 1</a></li>
-									<li><a href="home-02.php">Homepage 2</a></li>
-									<li><a href="home-03.php">Homepage 3</a></li>
-								</ul>
-							</li>
 
-							<li>
-								<a href="product.php">Shop</a>
-							</li>
-
-							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.php">Features</a>
-							</li>
-
-<!-- 							<li>
-								<a href="blog.php">Blog</a>
-							</li> -->
-
-							<li>
-								<a href="about.php">About</a>
-							</li>
-
-							<li>
-								<a href="contact.php">Contact</a>
-							</li>
-						</ul>
-					</div>	
-
+					<!-- navbar 2 -->
+						<?php include_once("./includes/navbar2.php");?>
+			
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">

@@ -1,6 +1,9 @@
+MY PERSONAL NOTE AND TODO LIST
+
+
 <!-- for filter  -->
 on click (color or tag or price) 
-select all product where product's (what ever filter cat was clicked) is the color click
+select all product where product's (what ever filter cat was clicked) is the color clicked
 
 <!-- for the search engine -->
 select all from product where productname, tag, color etc like %search% 
@@ -14,3 +17,6 @@ a registration, login and profile page to be collected from obaju
 
 <!-- order -->
 order history from obaju
+
+<!-- account -->
+onclick myaccount, if not logged in, take to login page which has registration direction .. after logging in or register, take to home page and if session exists take to customer-account.html

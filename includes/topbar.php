@@ -1,4 +1,4 @@
-	<!-- TOPBAR FOR ABOUT, BLOG-DETAIL, BLOG, CONTACT, PRODUCT-DETAIL, PRODUCT, SHOPING-CART -->
+	<!-- TOPBAR FOR INDEX, ABOUT, BLOG-DETAIL, BLOG, CONTACT, PRODUCT-DETAIL, PRODUCT, SHOPING-CART -->
 			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
@@ -10,7 +10,7 @@
 							Help & FAQs
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
+						<a href="customer-account.php" class="flex-c-m trans-04 p-lr-25">
 							My Account
 						</a>
 
@@ -24,11 +24,3 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="wrap-menu-desktop how-shadow1">
-				<nav class="limiter-menu-desktop container">
-					
-					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
-					</a>
