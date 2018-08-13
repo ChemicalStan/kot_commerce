@@ -10,7 +10,7 @@ select all from product where productname, tag, color etc like %search%
 
 <!-- for likes -->  if possible create table for like:
 table should contain like id, post_liked id, liked dateand time ,liked by... etc . this has a high tendency of not working..
-onclick the button, set liked = true and likecount = likecount + 1 on click again, set like = false and likecount = likecount - 1
+onclick the button, set liked = true and likecount = likecount + 1 on click again, set like = false and likecount = likecount - 1 if user id is stil the user id in question
 
 <!-- profile page -->
 a registration, login and profile page to be collected from obaju
@@ -19,4 +19,7 @@ a registration, login and profile page to be collected from obaju
 order history from obaju
 
 <!-- account -->
-onclick myaccount, if not logged in, take to login page which has registration direction .. after logging in or register, take to home page and if session exists take to customer-account.html
+onclick myaccount, if not logged in, take to login page which has registration direction .. after logging in or register, take to home page and if session exists take to customer-account.html hence all othe content of the page should be hidden.. exept the nav-bar that contains the registration info's which is in registration.php
+
+####categoty selection
+onclick this category .. select all from product equal to the cat id passed through the link .. this should be sent to the product or shops page
