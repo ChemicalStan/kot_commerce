@@ -279,8 +279,9 @@ section {
 
 .page-container {
     background: #e5e5e5;
-    padding-left: 300px;
+    padding-left: 80px;
 }
+
 
 @media (max-width: 991px) {
     .page-container {
