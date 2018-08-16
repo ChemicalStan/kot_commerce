@@ -1,4 +1,4 @@
-<?php require_once('includes/header.php'); ?>
+<?php require_once"./includes/admin_header.php"; ?>
 
 	<div class="page-container">
 		<div class="col-lg-10">
@@ -9,4 +9,4 @@
 
 
 
-<?php require_once('includes/footer.php'); ?>
+<?php require_once"./includes/admin_footer.php"; ?>
