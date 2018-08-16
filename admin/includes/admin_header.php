@@ -1,4 +1,7 @@
-<?php require_once"../includes/db.php";?>
+<?php 
+ob_start();
+require_once"../includes/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +80,17 @@
                             <li>
                                 <a href="table.php">
                                     <i class="fas fa-trophy"></i>
-                                    <span class="bot-line"></span>Features</a>
+                                    <span class="bot-line"></span>View All Products</a>
+                            </li>
+                            <li>
+                                <a href="table.php">
+                                    <i class="fas fa-trophy"></i>
+                                    <span class="bot-line"></span>Add User</a>
+                            </li>
+                            <li>
+                                <a href="table.php">
+                                    <i class="fas fa-trophy"></i>
+                                    <span class="bot-line"></span>View All Users</a>
                             </li>
                             <li class="has-sub">
                                 <a href="#">
