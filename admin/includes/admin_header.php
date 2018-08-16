@@ -46,14 +46,14 @@ require_once"../includes/db.php";
             <div class="section__content section__content--p35">
                 <div class="header3-wrap">
                     <div class="header__logo">
-                        <a href="../">
+<!--                         <a href="../">
                             <img src="images/icon/logo-white.png" alt="CoolAdmin" />
-                        </a>
+                        </a> -->
                     </div>
                     <div class="header__navbar">
                         <ul class="list-unstyled">
                             <li class="has-sub">
-                                <a href="#">
+                                <a href="index.php">
                                     <i class="fas fa-tachometer-alt"></i>Dashboard
                                     <span class="bot-line"></span>
                                 </a>
@@ -72,25 +72,26 @@ require_once"../includes/db.php";
                                     </li>
                                 </ul> -->
                             </li>
-                            <li>
-                                <a href="add_products.php">
+                            <li class="has-sub">
+                                <a href="view_all_products.php">
                                     <i class="fas fa-shopping-basket"></i>
-                                    <span class="bot-line"></span>Add Product</a>
+                                    <span class="bot-line"></span>Products</a>
+                                <ul class="header3-sub-list list-unstyled">
+                                    <li>
+                                        <a href="add_products.php">Add Product</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a href="table.php">
+ 
+                            <li class="has-sub">
+                                <a href="view_all_users.php">
                                     <i class="fas fa-trophy"></i>
-                                    <span class="bot-line"></span>View All Products</a>
-                            </li>
-                            <li>
-                                <a href="table.php">
-                                    <i class="fas fa-trophy"></i>
-                                    <span class="bot-line"></span>Add User</a>
-                            </li>
-                            <li>
-                                <a href="table.php">
-                                    <i class="fas fa-trophy"></i>
-                                    <span class="bot-line"></span>View All Users</a>
+                                    <span class="bot-line"></span>Users</a>
+                                    <ul class="header3-sub-list list-unstyled">
+                                        <li>
+                                            <a href="add_users.php">Add User</a>
+                                        </li>
+                                    </ul>
                             </li>
                             <li class="has-sub">
                                 <a href="#">
@@ -108,7 +109,7 @@ require_once"../includes/db.php";
                                     </li>
                                 </ul>
                             </li>
-                            <li class="has-sub">
+<!--                             <li class="has-sub">
                                 <a href="#">
                                     <i class="fas fa-desktop"></i>
                                     <span class="bot-line"></span>UI Elements</a>
@@ -147,7 +148,7 @@ require_once"../includes/db.php";
                                         <a href="typo.php">Typography</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="header__tool">
@@ -280,9 +281,12 @@ require_once"../includes/db.php";
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
+
                         <a class="logo" href="../index.php">
                             <img src="images/icon/logo-white.png" alt="CoolAdmin" />
                         </a>
+
+
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
@@ -294,44 +298,36 @@ require_once"../includes/db.php";
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                        <li>
+                            <a class="js-arrow" href="index.php">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-<!--                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-chart-bar"></i>Products</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="index.php">Dashboard 1</a>
+                                    <a href="view_all_products.php">View All Products</a>
                                 </li>
                                 <li>
-                                    <a href="index2.php">Dashboard 2</a>
+                                    <a href="add_products.php">Add Product</a>             
+                                </li>
+                            </ul>
+                        </li>
+                       <li>
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-chart-bar"></i>Users</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="view_all_products.php">View All Users</a>
                                 </li>
                                 <li>
-                                    <a href="index3.php">Dashboard 3</a>
+                                    <a href="add_products.php">Add User</a>             
                                 </li>
-                                <li>
-                                    <a href="index4.php">Dashboard 4</a>
-                                </li>
-                            </ul> -->
+                            </ul>
                         </li>
-                        <li>
-                            <a href="add_products.php">
-                                <i class="fas fa-chart-bar"></i>Add Product</a>
-                        </li>
-                        <li>
-                            <a href="table.php">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="form.php">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.php">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
+                       
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-copy"></i>Pages</a>
@@ -347,7 +343,7 @@ require_once"../includes/db.php";
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
+<!--                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-desktop"></i>UI Elements</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
@@ -385,7 +381,7 @@ require_once"../includes/db.php";
                                     <a href="typo.php">Typography</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
