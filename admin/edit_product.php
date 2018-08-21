@@ -1,4 +1,8 @@
-<?php require_once('includes/admin_header.php'); 
+<?php require_once"includes/admin_header.php";
+	if (isset($_POST['product_id'])) {
+		echo $edit_product_id = $_POST['product_id'];
+	}
+
     if (isset($_GET['message'])) {
        $message = $_GET['message'];
        if (strlen($message) < 23) {
@@ -12,9 +16,9 @@
 
         $sql = "SELECT * FROM categories";
         $stmt = $pdo->query($sql);
-    }catch(PDOExeption $e){
-        $message = $e->getMessage();
-        echo $message;
+    }catch(PDOException $e){
+        $error = $e->getMessage();
+        echo $error;
     }
 
 ?>
@@ -37,7 +41,7 @@
         move_uploaded_file($product_image_tmp, "../img/$product_image");
 
 // move items to database
-  if (!empty($product_name) || !empty($product_price) || !empty($product_image)) {
+  if (!empty($product_name) && !empty($product_price) && !empty($product_image)) {
     
               
     try{
@@ -133,6 +137,11 @@
             </div>
         </div>
     </div> 
+
+
+
+
+
 
 
 

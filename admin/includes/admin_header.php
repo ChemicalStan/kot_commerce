@@ -78,7 +78,7 @@ require_once"../includes/db.php";
                                     <span class="bot-line"></span>Products</a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="add_products.php">Add Product</a>
+                                        <a href="add_product.php">Add Product</a>
                                     </li>
                                 </ul>
                             </li>
@@ -311,7 +311,7 @@ require_once"../includes/db.php";
                                     <a href="view_all_products.php">View All Products</a>
                                 </li>
                                 <li>
-                                    <a href="add_products.php">Add Product</a>             
+                                    <a href="add_product.php">Add Product</a>             
                                 </li>
                             </ul>
                         </li>
@@ -323,7 +323,7 @@ require_once"../includes/db.php";
                                     <a href="view_all_products.php">View All Users</a>
                                 </li>
                                 <li>
-                                    <a href="add_products.php">Add User</a>             
+                                    <a href="add_user.php">Add User</a>             
                                 </li>
                             </ul>
                         </li>
