@@ -1,8 +1,16 @@
 <?php require_once"includes/admin_header.php";
 
 // CODE TO CATCH THE POST ID TO BE EDITED
-	if (isset($_POST['product_id'])) {
-		$edit_product_id = $_POST['product_id'];
+    // get request
+    if (isset($_GET['product_id'])) {
+        $edit_product_id = $_GET['product_id'];
+    }
+  // post request  
+if (isset($_POST['product_id']) || !empty($edit_product_id)) {
+    if (empty($edit_product_id)) {
+        $edit_product_id = $_POST['product_id'];
+    }
+	
 
 // CODE TO FETCH POST'S DATAS FROM DATABASE
 		try {
@@ -37,9 +45,10 @@
     }
 
 
-// THE PHP CODES BELOW HANDLES THE FILES COMMING FROM THE ABOVE FORM INTO THE DATABASE
+// THE PHP CODES BELOW HANDLES THE FILES COMMING FROM THE FORM INTO THE DATABASE
 
      if (isset($_POST["submit"])) {
+        $edit_product_id = $_POST['product_id'];
         $product_name = $_POST["product_name"];
         $product_cat_id = $_POST["product_category"];
         $product_price = $_POST["product_price"];
@@ -52,23 +61,26 @@
         move_uploaded_file($product_image_tmp, "../img/$product_image");
 
 // update product in database
-  if (!empty($product_name) && !empty($product_price) && !empty($product_image)) {
+  if (!empty($product_name) && !empty($product_price) && !empty($product_image) && !empty($edit_product_id)) {
     
     try{
-        $sql = "INSERT INTO products(product_name, product_cat_id, product_price, product_image, product_quantity, product_status, product_tag) VALUES (:pname, :pcat_id, :pprice, :pimage, :pquantity, :pstatus, :ptag)";
+
+
+
+        $sql = "UPDATE products SET product_name=':pname', product_cat_id=':pcat_id', pprice=':product_price', product_image=':pimage', product_quantity=':pquantity', product_status=':pstatus', product_tag=':ptag' WHERE product_id = :pid";
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute(['pname'=>$product_name, 'pcat_id'=>$product_cat_id, 'pprice'=>$product_price, 'pimage'=>$product_image, 'pquantity'=>$product_quantity, 'pstatus'=>$product_status, 'ptag'=>$product_tag]);
+        $stmt->execute(['pname'=>$product_name, 'pcat_id'=>$product_cat_id, 'pprice'=>$product_price, 'pimage'=>$product_image, 'pquantity'=>$product_quantity, 'pstatus'=>$product_status, 'ptag'=>$product_tag, 'pid'=>$edit_product_id]);
 
-        $message = "<h5 class='bg-success text-center'>Product Added Succesfully.</h5>";
+        $message = "<h5 class='bg-success text-center'>Product Edited Succesfully.</h5>";
 
-        header("Location:./edit_products.php?message=$message");
+        // header("Location:./edit_product.php?message=$message&product_id=$edit_product_id");
      }catch(PDOExeption $e){
         echo $message = $e->getMessage();
      }
    }else{
     $message = "<h5 class='bg-warning text-center'>Please No Field Should Be Left Empty!</h5>";
-    header("Location:./edit_product.php?message=$message");
+    // header("Location:./edit_product.php?message=$message&product_id=$edit_product_id");
    }
          
 }
@@ -78,7 +90,7 @@
     <div class="col-lg-10">
             <div class="card">
                 <div class="card-header">
-                    <strong>Edit Product</strong>
+                    <strong>Edit Product <?php echo $edit_product_id; ?></strong>
                     <small> Page</small>
                 </div>
 
@@ -102,6 +114,7 @@
  <?php 
  // CODE TO FETCH ALL CATEGORIES AND DISPLAY IN SELECT OPTION
    try{
+        // product default cat
         $sql1 = "SELECT * FROM categories WHERE cat_id = :cat_id";
         $stmt1 = $pdo->prepare($sql1);
         $stmt1->execute([':cat_id'=>$db_product_cat_id]);
@@ -111,6 +124,7 @@
         	$db_product_cat_title = $default_cat->cat_title;
         	echo "<option value='$db_product_cat_id'>$db_product_cat_title</option>";
         }
+        // the remaining categories
         $sql = "SELECT * FROM categories WHERE cat_id != :cat_id";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([':cat_id'=>$db_product_cat_id]);
@@ -168,6 +182,7 @@
                         <input type="text" name="product_tag" value="<?php echo"$db_product_tag";?>" class="form-control">
                     </div>
                     <hr>
+                    <input type="hidden" name="product_id" value="<?php echo $edit_product_id;?>">
                     <div class="form-group">
                     <input type="submit" class="btn btn-success btn-sm" name="submit" value="Edit Product">
                     </div>

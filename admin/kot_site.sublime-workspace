@@ -168,7 +168,7 @@
 			"file": "edit_product.php",
 			"settings":
 			{
-				"buffer_size": 7422,
+				"buffer_size": 7478,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "edit_product.php"
@@ -207,7 +207,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/kingot"
+		"/Applications/XAMPP/xamppfiles/htdocs/kingot",
+		"/Applications/XAMPP/xamppfiles/htdocs/kingot/cool_admin"
 	],
 	"file_history":
 	[
@@ -385,15 +386,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7422,
+						"buffer_size": 7478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3878,
-								3878
+								4843,
+								4843
 							]
 						],
 						"settings":
@@ -404,7 +405,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1321.0,
+						"translation.y": 1010.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
