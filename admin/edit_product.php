@@ -32,12 +32,12 @@ if (isset($_GET['product_id'])) {
 
 	}
 // CODE TO CATCH SUCCES OR ERROR MESSAGE
-    if (isset($_GET['message'])) {
-       $message = $_GET['message'];
-       if (strlen($message) < 23) {
-        $success_message = $_GET['message'];
-       }else{$error_message = $_GET['message'];}
-    }
+    // if (isset($_GET['message'])) {
+    //    $message = $_GET['message'];
+    //    if (strlen($message) < 23) {
+    //     $success_message = $_GET['message'];
+    //    }else{$error_message = $_GET['message'];}
+    // }
 
 
 // THE PHP CODES BELOW HANDLES THE FILES COMMING FROM THE FORM INTO THE DATABASE
@@ -51,6 +51,7 @@ if (isset($_GET['product_id'])) {
         $product_quantity = $_POST["product_quantity"];
         $product_status = $_POST["product_status"];
         $product_tag = $_POST["product_tag"];
+        $date_added = date('y-m-d');
 // move uploaded image to a temporary folder 
         move_uploaded_file($product_image_tmp, "../img/$product_image");
 
@@ -61,10 +62,10 @@ if (isset($_GET['product_id'])) {
 
 
 
-        $sql = "UPDATE products SET product_name=':pname', product_cat_id=':pcat_id', pprice=':product_price', product_image=':pimage', product_quantity=':pquantity', product_status=':pstatus', product_tag=':ptag' WHERE product_id = :pid";
+        $sql = "UPDATE products SET product_name=:pname, product_cat_id=:pcat_id, product_price=:pprice, product_image=:pimage, product_quantity=:pquantity, product_status=:pstatus, product_tag=:ptag, date_added=:pdate WHERE product_id = :pid";
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute(['pname'=>$product_name, 'pcat_id'=>$product_cat_id, 'pprice'=>$product_price, 'pimage'=>$product_image, 'pquantity'=>$product_quantity, 'pstatus'=>$product_status, 'ptag'=>$product_tag, 'pid'=>$edit_product_id]);
+        $stmt->execute(['pname'=>$product_name, 'pcat_id'=>$product_cat_id, 'pprice'=>$product_price, 'pimage'=>$product_image, 'pquantity'=>$product_quantity, 'pstatus'=>$product_status, 'ptag'=>$product_tag, 'pdate'=>$date_added, 'pid'=>$edit_product_id]);
 
         $message = "<h5 class='bg-success text-center'>Product Edited Succesfully.</h5>";
 

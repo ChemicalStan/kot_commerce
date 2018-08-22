@@ -32,7 +32,8 @@
         $product_quantity = $_POST["product_quantity"];
         $product_status = $_POST["product_status"];
         $product_tag = $_POST["product_tag"];
-        // $date_added = date('d-m-y');
+        $date_added = date('y-m-d');
+        
 // move uploaded image to a temporary folder 
         move_uploaded_file($product_image_tmp, "../img/$product_image");
 
@@ -41,10 +42,10 @@
     
               
     try{
-        $sql = "INSERT INTO products(product_name, product_cat_id, product_price, product_image, product_quantity, product_status, product_tag) VALUES (:pname, :pcat_id, :pprice, :pimage, :pquantity, :pstatus, :ptag)";
+        $sql = "INSERT INTO products(product_name, product_cat_id, product_price, product_image, product_quantity, product_status, product_tag, date_added) VALUES (:pname, :pcat_id, :pprice, :pimage, :pquantity, :pstatus, :ptag, :pdate)";
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute(['pname'=>$product_name, 'pcat_id'=>$product_cat_id, 'pprice'=>$product_price, 'pimage'=>$product_image, 'pquantity'=>$product_quantity, 'pstatus'=>$product_status, 'ptag'=>$product_tag]);
+        $stmt->execute(['pname'=>$product_name, 'pcat_id'=>$product_cat_id, 'pprice'=>$product_price, 'pimage'=>$product_image, 'pquantity'=>$product_quantity, 'pstatus'=>$product_status, 'ptag'=>$product_tag, 'pdate'=>$date_added]);
 
         $message = "<h5 class='bg-success text-center'>Product Added Succesfully.</h5>";
 
