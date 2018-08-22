@@ -79,13 +79,13 @@ echo    "<tr>
             <td>
               <form method='POST' action='edit_product.php'>
                 <input type='hidden' name='product_id' value='$product_id'>
-                <input class='btn btn-warning' type='submit' name='edit' value='Edit'>
+                <input class='btn btn-warning btn-sm' type='submit' name='edit' value='Edit'>
               </form>       
             </td>
             <td>
               <form method='POST' action='delete_product.php'>
                 <input type='hidden' name='product_id' value='$product_id'>
-                <input class='btn btn-danger' type='submit' name='delete' value='Delete'>
+                <input class='btn btn-danger btn-sm' type='submit' name='delete' value='Delete'>
               </form>       
             </td>
 
