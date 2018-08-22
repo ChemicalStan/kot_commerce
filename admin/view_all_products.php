@@ -2,6 +2,29 @@
 
     <div class="row m-t-30">
         <div class="col-md-12">
+
+            <!-- ALERT-->
+<?php 
+    if (isset($_GET['message'])) {
+      $message = $_GET['message'];?>
+        
+            <div class="alert au-alert-success alert-dismissible fade show au-alert au-alert--70per text-center" role="alert">
+                <i class="zmdi zmdi-check-circle"></i>
+                <span class="content">
+                            <?php echo $message; ?>
+                </span>
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="zmdi zmdi-close-circle"></i>
+                    </span>
+                </button>
+            </div>
+        
+        <br>
+<?php }  ?>         
+
+            <!-- END ALERT-->
+
             <!-- DATA TABLE-->
           <div class="col-lg-12">
             <div class="table-responsive table--no-card m-b-30">

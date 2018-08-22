@@ -32,12 +32,12 @@ if (isset($_GET['product_id'])) {
 
 	}
 // CODE TO CATCH SUCCES OR ERROR MESSAGE
-    // if (isset($_GET['message'])) {
-    //    $message = $_GET['message'];
-    //    if (strlen($message) < 23) {
-    //     $success_message = $_GET['message'];
-    //    }else{$error_message = $_GET['message'];}
-    // }
+    if (isset($_GET['message'])) {
+       $message = $_GET['message'];
+       if (strlen($message) < 23) {
+        $success_message = $_GET['message'];
+       }else{$error_message = $_GET['message'];}
+    }
 
 
 // THE PHP CODES BELOW HANDLES THE FILES COMMING FROM THE FORM INTO THE DATABASE
@@ -69,7 +69,7 @@ if (isset($_GET['product_id'])) {
 
         $message = "<h5 class='bg-success text-center'>Product Edited Succesfully.</h5>";
 
-        // header("Location:./edit_product.php?message=$message&product_id=$edit_product_id");
+        header("Location:./edit_product.php?message=$message&product_id=$edit_product_id");
      }catch(PDOExeption $e){
         echo $message = $e->getMessage();
      }
@@ -85,7 +85,7 @@ if (isset($_GET['product_id'])) {
     <div class="col-lg-10">
             <div class="card">
                 <div class="card-header">
-                    <strong>Edit Product <?php echo $edit_product_id; ?></strong>
+                    <strong>Edit Product</strong>
                     <small> Page</small>
                 </div>
 
