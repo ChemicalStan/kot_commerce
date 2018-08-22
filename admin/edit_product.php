@@ -1,15 +1,10 @@
 <?php require_once"includes/admin_header.php";
 
 // CODE TO CATCH THE POST ID TO BE EDITED
-    // get request
-    if (isset($_GET['product_id'])) {
-        $edit_product_id = $_GET['product_id'];
-    }
+
   // post request  
-if (isset($_POST['product_id']) || !empty($edit_product_id)) {
-    if (empty($edit_product_id)) {
-        $edit_product_id = $_POST['product_id'];
-    }
+if (isset($_GET['product_id'])) {
+        $edit_product_id = $_GET['product_id'];
 	
 
 // CODE TO FETCH POST'S DATAS FROM DATABASE
@@ -48,7 +43,6 @@ if (isset($_POST['product_id']) || !empty($edit_product_id)) {
 // THE PHP CODES BELOW HANDLES THE FILES COMMING FROM THE FORM INTO THE DATABASE
 
      if (isset($_POST["submit"])) {
-        $edit_product_id = $_POST['product_id'];
         $product_name = $_POST["product_name"];
         $product_cat_id = $_POST["product_category"];
         $product_price = $_POST["product_price"];
@@ -182,7 +176,6 @@ if (isset($_POST['product_id']) || !empty($edit_product_id)) {
                         <input type="text" name="product_tag" value="<?php echo"$db_product_tag";?>" class="form-control">
                     </div>
                     <hr>
-                    <input type="hidden" name="product_id" value="<?php echo $edit_product_id;?>">
                     <div class="form-group">
                     <input type="submit" class="btn btn-success btn-sm" name="submit" value="Edit Product">
                     </div>

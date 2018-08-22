@@ -77,10 +77,7 @@ echo    "<tr>
             <td class='text-center'>$product_tag</td>
             <td class='text-center'>$product_date</td>
             <td>
-              <form method='POST' action='edit_product.php'>
-                <input type='hidden' name='product_id' value='$product_id'>
-                <input class='btn btn-warning btn-sm' type='submit' name='edit' value='Edit'>
-              </form>       
+              <a class='btn btn-warning btn-sm' href='edit_product.php?product_id=$product_id'>Edit</a>       
             </td>
             <td>
               <form method='POST' action='delete_product.php'>
